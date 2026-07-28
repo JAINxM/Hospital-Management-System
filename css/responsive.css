@@ -1,0 +1,93 @@
+/* ============================================================
+   RESPONSIVE BREAKPOINTS STYLESHEET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .app-sidebar {
+        transform: translateX(-100%);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .app-container.sidebar-open .app-sidebar {
+        transform: translateX(0);
+    }
+
+    .app-main-content {
+        margin-left: 0 !important;
+    }
+
+    .sidebar-close-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1.25rem 1rem;
+    }
+
+    .app-navbar {
+        padding: 0 1rem;
+    }
+
+    .global-search-container {
+        max-width: 200px;
+    }
+
+    .navbar-date {
+        display: none;
+    }
+
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-12, .col-8, .col-6, .col-4, .col-3 {
+        width: 100%;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .invoice-meta-top {
+        text-align: left;
+    }
+
+    .invoice-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .invoice-wrapper {
+        padding: 1.5rem;
+    }
+
+    .summary-table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.35rem;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .table-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .table-search-box {
+        max-width: 100%;
+    }
+
+    .dashboard-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

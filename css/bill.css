@@ -1,0 +1,190 @@
+/* ============================================================
+   BILLING & INVOICE STYLESHEET
+   ============================================================ */
+
+.invoice-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 3rem;
+}
+
+.invoice-actions-bar {
+    max-width: 850px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.invoice-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hotel-branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.invoice-hotel-logo {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), #1d4ed8);
+    color: #ffffff;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel-details h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hotel-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.invoice-meta-top {
+    text-align: right;
+}
+
+.invoice-badge-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.invoice-number-tag {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.invoice-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: var(--bg-main);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.info-block h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.info-block p {
+    font-size: 0.925rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.invoice-table th {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0.75rem 1rem;
+}
+
+.invoice-table td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.925rem;
+}
+
+.invoice-summary-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.summary-table {
+    width: 320px;
+}
+
+.summary-table tr td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.925rem;
+}
+
+.summary-table tr td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.summary-table tr.grand-total-row td {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.75rem;
+}
+
+.invoice-footer-note {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Print Specific Styles */
+@media print {
+    body {
+        background: #ffffff;
+    }
+
+    .app-sidebar,
+    .app-navbar,
+    .app-footer,
+    .invoice-actions-bar,
+    .alert {
+        display: none !important;
+    }
+
+    .app-main-content {
+        margin-left: 0 !important;
+    }
+
+    .page-content {
+        padding: 0 !important;
+    }
+
+    .invoice-wrapper {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+}
